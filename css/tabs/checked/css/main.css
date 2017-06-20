@@ -1,3 +1,8 @@
+body {
+  margin: auto;
+  max-width: 85vw;
+}
+
 .tabs {
   position: relative;
   min-height: 200px;
