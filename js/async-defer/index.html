@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width">
-  <title>Async / Defer example</title>
+  <title>JS Async / Defer</title>
   <!-- Styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
@@ -21,16 +21,19 @@
 
 <body>
   <main>
+    <h1>JS Async / Defer</h1>
     <article>
-      <h1>Async / Defer example</h1>
+      <h2>Scripts without <code>async</code> or <code>defer</code> attributes</h2>
       <p>
-        Scripts without <code>async</code> or <code>defer</code> attributes, as well as inline scripts, are fetched and executed immediately, before the browser continues to parse the page.
+        As well as inline scripts, are fetched and executed immediately, before the browser continues to parse the page.
       </p>
+      <h2>The <code>async</code> attribute</h2>
       <p>
-        The <code>async</code> attribute indicate that the browser should, if possible, execute the script asynchronously. It must not be used if the <code>src</code> attribute is not present (i.e. for inline scripts), in this case it will have no effect.
+        Indicates that the browser should, if possible, execute the script asynchronously. It must not be used if the <code>src</code> attribute is not present (i.e. for inline scripts), in this case it will have no effect.
       </p>
+      <h2>The <code>defer</code> attribute</h2>
       <p>
-        The <code>defer</code> attribute indicate to the browser that the script is meant to be executed after the document has been parsed, but before firing&nbsp;<code><a title="/en-US/docs/Web/Events/DOMContentLoaded" href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></code>.
+        Indicates to the browser that the script is meant to be executed after the document has been parsed, but before firing&nbsp;<code><a title="/en-US/docs/Web/Events/DOMContentLoaded" href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></code>.
         It must not be used if the <code>src</code> attribute is not present (i.e. for inline scripts), in this case it will have no effect.
       </p>
     </article>
