@@ -1,0 +1,24 @@
+body {
+  margin: auto;
+  max-width: 85vw;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: red;
+  stroke-width: 3px;
+}
+
+.node text {
+  font: 24px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
