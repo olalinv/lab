@@ -1,0 +1,14 @@
+body {
+  margin: auto;
+  max-width: 85vw;
+}
+
+[contenteditable] {
+  background-color: lightskyblue;
+  border: solid 1px #999;
+  padding: 10px;
+}
+
+[contenteditable = "false"] {
+  background-color: #eee;
+}
