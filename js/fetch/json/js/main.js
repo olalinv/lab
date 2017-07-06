@@ -6,11 +6,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   fetch('json/products.json')
   .then(function (response) {
-    console.log(response);
     return response.json();
   })
   .then(function (json) {
-    console.log(json);
     for (var i = 0; i < json.products.length; i++) {
       var listItem = document.createElement('li');
       listItem.innerHTML = '<strong>' + json.products[i].Name + '</strong>';
