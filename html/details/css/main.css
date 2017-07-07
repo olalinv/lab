@@ -16,10 +16,11 @@ summary::-webkit-details-marker {
 }
 
 summary::before {
-  content: '⇣';
+  content: '+';
+  font-weight: 700;
   padding-right: 0.5em;
 }
 
 details[open] > summary::before {
-  content: '⇡';
+  content: '-';
 }
