@@ -1,8 +1,8 @@
-/* global $, event */
+/* global $ */
 $(function () {
-  var title;
+  var title, pageY, pageX;
   $('a[title], img[alt]').hover(
-    function () {
+    function (event) {
       if ($(this).is('img')) {
         // Tags: img
         title = $(this).attr('alt');
@@ -13,14 +13,16 @@ $(function () {
         $(this).attr('title', '');
       }
       $(this).after('<span class="tooltip"></span>');
+      pageY = event.pageY;
+      pageX = event.pageX;
       $('.tooltip').css({
-        top: (event.pageY > 30 ? event.pageY : event.pageY + 50),
-        left: event.pageX
+        top: pageY > 30 ? pageY : pageY + 50,
+        left: pageX
       });
       $('.tooltip').text(title);
       $('.tooltip').fadeIn('slow');
     },
-    function () {
+    function (event) {
       $('.tooltip').fadeOut('slow');
       $('.tooltip').remove();
       if ($(this).is('img')) {
