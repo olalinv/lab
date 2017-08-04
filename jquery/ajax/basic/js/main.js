@@ -3,11 +3,11 @@ $(function () {
   $('#trigger').click(function () {
     $.ajax({
       url: 'test.html',
-      context: document.body
+      context: $('#test')
     }).done(function (data) {
-      $(this).addClass('done');
-      $(this).append(data);
       console.log('done');
+      $(this).addClass('done');
+      $(this).html(data);
     }).fail(function () {
       console.log('fail');
     });
