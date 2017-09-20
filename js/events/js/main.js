@@ -9,9 +9,15 @@ window.addEventListener('load', function (event) {
 });
 
 // beforeunload
-window.addEventListener('beforeunload', function (event) {
-  console.log('beforeunload');
-});
+window.onbeforeunload = function (event) {
+  return 'Bye';
+};
+
+// window.addEventListener('beforeunload', function (event) {
+//   var confirmationMessage = '\o/';
+//   event.returnValue = confirmationMessage;
+//   return confirmationMessage;
+// });
 
 // unload
 window.addEventListener('unload', function (event) {
