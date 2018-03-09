@@ -1,0 +1,29 @@
+{
+  "name": "unsplash-js-xilon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server.js"
+  },
+  "author": "@robottitto",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-eslint": "5.0.0-beta6",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "css-loader": "^0.28.10",
+    "es6-promise": "3.0.2",
+    "exports-loader": "0.6.2",
+    "imports-loader": "0.6.5",
+    "style-loader": "^0.20.2",
+    "unsplash-js": "^4.8.0",
+    "webpack": "1.12.3",
+    "webpack-dev-server": "1.12.1",
+    "whatwg-fetch": "0.10.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

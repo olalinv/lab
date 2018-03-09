@@ -1,0 +1,116 @@
+/* Declarations */
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+/* Elements */
+
+a {
+  cursor: pointer;
+}
+
+html,
+body {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+main {
+  background-color: #eee;
+  height: calc(100vh - 104px);
+  overflow-y: auto;
+  padding: 15px;
+}
+
+footer {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+}
+
+/* Classes */
+
+.btn-close {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  z-index: 3;
+}
+
+.btn-close::before {
+    content: 'X';
+}
+
+.gallery {
+  column-gap: 1em;
+  column-width: 13em;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    column-gap: 0;
+    column-width: 10em;
+  }
+}
+
+.item {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.item img {
+  height: auto;
+  width: 100%;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.85);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.overlay img {
+  height: 90%;
+  left: 5%;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 5%;
+  width: 90%;
+  z-index: 2;
+}
+
+.search-filter {}
+
+/* Spinner */
+
+.spinner {
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+  background-color: #fff;
+  border-radius: 100%;
+  height: 40px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  z-index: 1;
+}
