@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title>JS readyState</title>
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <main>
+    <h1>JS readyState</h1>
+    <article>
+      <p>
+        The <strong>Document.readyState</strong> property of a <a title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree." href="/en-US/docs/Web/API/Document"><code>document</code></a>        describes the loading state of the document.
+      </p>
+      <dl>
+        <dt>loading</dt>
+        <dd>The <a title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree." href="/en-US/docs/Web/API/Document"><code>document</code></a> is still loading.</dd>
+        <dt>interactive</dt>
+        <dd>The document has finished loading and the document has been parsed but sub-resources such as images, stylesheets and frames are still loading.</dd>
+        <dt>complete</dt>
+        <dd>The document and all sub-resources have finished loading. The state indicates that the <code><a title="/en-US/docs/Web/Events/load" href="/en-US/docs/Web/Events/load">load</a></code> event is about to fire.</dd>
+      </dl>
+      <p>
+        When the value of this property changes a <code><a title="/en-US/docs/Web/Events/readystatechange" href="/en-US/docs/Web/Events/readystatechange">readystatechange</a></code> event fires on the <a title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree."
+          href="/en-US/docs/Web/API/Document"><code>document</code></a> object.
+      </p>
+    </article>
+  </main>
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
