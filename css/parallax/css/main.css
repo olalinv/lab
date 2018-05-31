@@ -1,20 +1,15 @@
 body {
   margin: auto;
-  max-width: 85vw;
 }
 
 .section {
   background-attachment: fixed;
   background-image: url(http://via.placeholder.com/1600x1200/ffffff/000000/?text=1);
   background-position: center center;
+  background-size: cover;
   height: 100vh;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100vw;
 }
 
 .section + .section {
   background-image: url(http://via.placeholder.com/1600x1200/000000/ffffff?text=2);
-  margin-top: 100vh;
 }
