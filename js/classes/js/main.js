@@ -7,13 +7,13 @@ class Thing {
   }
   // Methods
   doSomething (thing) {
-    console.log(`This thing has an attribute 'attr1' with value '${thing.attr1}' and an attribute 'attr2' with value '${thing.attr2}'`);
+    console.log(`This thing has an attribute '${Object.keys(thing)[0]}' with value '${thing.attr1}' and an attribute '${Object.keys(thing)[1]}' with value '${thing.attr2}'`);
   }
 }
 
-// A thing
-let thing1 = new Thing('Value1', 'Value2');
+// Thing 1
+let thing1 = new Thing('value1', 'value2');
 thing1.doSomething(thing1);
-// Another thing
-let thing2 = new Thing('ValueA', 'ValueB');
+// Thing 2
+let thing2 = new Thing('valueA', 'valueB');
 thing2.doSomething(thing2);
