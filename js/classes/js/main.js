@@ -6,13 +6,13 @@ class Thing {
     console.log(this);
   }
   // Methods
-  doSomething () {
+  saySomething () {
     console.log(`I'm a thing`);
   }
   explainYourself (thing) {
     console.log(
       `I have: 
-      an attribute '${Object.keys(thing)[0]}' with value '${thing.attr1}' and 
+      an attribute '${Object.keys(thing)[0]}' with value '${thing.attr1}', 
       an attribute '${Object.keys(thing)[1]}' with value '${thing.attr2}'`);
   }
 }
@@ -26,15 +26,15 @@ class SubThing extends Thing {
     console.log(this);
   }
   // Methods
-  doSomething () {
-    super.doSomething();
+  saySomething () {
+    super.saySomething();
     console.log(`I'm a subthing`);
   }
   explainYourself (subthing) {
     console.log(
       `I have: 
       an attribute '${Object.keys(subthing)[0]}' with value '${subthing.attr1}', 
-      an attribute '${Object.keys(subthing)[1]}' with value '${subthing.attr2}' and 
+      an attribute '${Object.keys(subthing)[1]}' with value '${subthing.attr2}', 
       an attribute '${Object.keys(subthing)[2]}' with value '${subthing.attr3}'`
     );
   }
@@ -42,10 +42,10 @@ class SubThing extends Thing {
 
 // A thing
 let thing = new Thing('value1', 'value2');
-thing.doSomething();
+thing.saySomething();
 thing.explainYourself(thing);
 
 // A subthing
 let subthing = new SubThing('value1', 'value2', 'value3');
-subthing.doSomething();
+subthing.saySomething();
 subthing.explainYourself(subthing);
