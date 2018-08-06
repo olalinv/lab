@@ -7,11 +7,11 @@ class Thing {
   }
   // Methods
   doSomething () {
-    console.log(`This is a thing`);
+    console.log(`I'm a thing`);
   }
   explainYourself (thing) {
     console.log(
-      `This thing has: 
+      `I have: 
       an attribute '${Object.keys(thing)[0]}' with value '${thing.attr1}' and 
       an attribute '${Object.keys(thing)[1]}' with value '${thing.attr2}'`);
   }
@@ -28,11 +28,11 @@ class SubThing extends Thing {
   // Methods
   doSomething () {
     super.doSomething();
-    console.log(`This is a subthing`);
+    console.log(`I'm a subthing`);
   }
   explainYourself (subthing) {
     console.log(
-      `This subthing has: 
+      `I have: 
       an attribute '${Object.keys(subthing)[0]}' with value '${subthing.attr1}', 
       an attribute '${Object.keys(subthing)[1]}' with value '${subthing.attr2}' and 
       an attribute '${Object.keys(subthing)[2]}' with value '${subthing.attr3}'`
