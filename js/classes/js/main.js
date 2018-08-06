@@ -9,7 +9,7 @@ class Thing {
   doSomething () {
     console.log(`This is a thing`);
   }
-  explainThis (thing) {
+  explainYourself (thing) {
     console.log(
       `This thing has: 
       an attribute '${Object.keys(thing)[0]}' with value '${thing.attr1}' and 
@@ -30,8 +30,7 @@ class SubThing extends Thing {
     super.doSomething();
     console.log(`This is a subthing`);
   }
-  explainThis (subthing) {
-    // super.explainThis(subthing);
+  explainYourself (subthing) {
     console.log(
       `This subthing has: 
       an attribute '${Object.keys(subthing)[0]}' with value '${subthing.attr1}', 
@@ -44,9 +43,9 @@ class SubThing extends Thing {
 // A thing
 let thing = new Thing('value1', 'value2');
 thing.doSomething();
-thing.explainThis(thing);
+thing.explainYourself(thing);
 
 // A subthing
 let subthing = new SubThing('value1', 'value2', 'value3');
 subthing.doSomething();
-subthing.explainThis(subthing);
+subthing.explainYourself(subthing);
