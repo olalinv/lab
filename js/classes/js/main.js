@@ -1,3 +1,5 @@
+'use strict';
+
 // Classes
 class Thing {
   constructor (attr1, attr2) {
