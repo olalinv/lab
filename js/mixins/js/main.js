@@ -1,3 +1,5 @@
+'use strict';
+
 // Mixins
 let mixin = {
   madeIn () {
