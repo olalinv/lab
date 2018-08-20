@@ -1,3 +1,4 @@
+// Classes
 class Thing {
   constructor (attr1, attr2) {
     // Attributes
@@ -17,7 +18,7 @@ class Thing {
   }
 }
 
-// Inheritance
+// Subclasses
 class SubThing extends Thing {
   constructor (attr1, attr2, attr3) {
     // Attributes
