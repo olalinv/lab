@@ -41,6 +41,13 @@ class SubThing extends Thing {
     this._attr3 = attr3;
     console.log(this);
   }
+  // Getters/Setters
+  get attr3 () {
+    return this._attr3;
+  }
+  set attr3 (attr3) {
+    this._attr3 = attr3;
+  }
   // Methods
   saySomething () {
     super.saySomething();
@@ -59,11 +66,11 @@ class SubThing extends Thing {
 // A thing
 let thing = new Thing('value1', 'value2');
 console.log(thing.attr1); // getter
-thing.attr1 = 'value3'; // setter
+thing.attr1 = 'value11'; // setter
 console.log(thing.attr1);
 
 // A subthing
 let subthing = new SubThing('value1', 'value2', 'value3');
-console.log(subthing.attr1); // getter
-subthing.attr1 = 'value3'; // setter
-console.log(subthing.attr1);
+console.log(subthing.attr3); // getter
+subthing.attr3 = 'value33'; // setter
+console.log(subthing.attr3);
