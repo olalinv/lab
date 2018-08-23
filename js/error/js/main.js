@@ -3,8 +3,11 @@
 try {
   thing.doSomething(); // Throws ReferenceError
   // eval('alert("Hello world)'); // Throws SyntaxError
+  // throw 'myException'; // generates an exception
 } catch (e) {
-  console.log(e.name + ': ' + e.message);
+  if (e.name || e.message) {
+    console.log(e.name + ': ' + e.message);
+  }
   if (e instanceof EvalError) {
 
   } else if (e instanceof RangeError) {
@@ -17,5 +20,8 @@ try {
 
   } else if (e instanceof URIError) {
 
+  } else {
+    // unspecified exceptions
+    console.log(e); // pass exception object to error handler
   }
 }
