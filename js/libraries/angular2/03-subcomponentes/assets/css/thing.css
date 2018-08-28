@@ -1,0 +1,13 @@
+.active {
+	color: #369;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.hide {
+	display: none;
+}
+
+.thing {
+	cursor: pointer;
+}
