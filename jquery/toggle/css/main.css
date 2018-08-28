@@ -1,0 +1,9 @@
+html,
+body {
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+#item {
+  display: inline;
+}
