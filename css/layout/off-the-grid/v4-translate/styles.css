@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+figcaption {
+    color: #999;
+    text-align: center;
+}
+
+figure,
+p {
+    margin: 15px 0;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+
+.full-width {
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    width: 100vw;
+}
