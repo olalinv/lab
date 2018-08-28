@@ -1,0 +1,5 @@
+mkdir cert
+cd cert
+openssl genrsa -out quiz-olalinv-key.pem 2048
+openssl req -new -sha256 -key quiz-olalinv-key.pem -out quiz-olalinv-csr.pem
+openssl x509 -req -in quiz-olalinv-csr.pem -signkey quiz-olalinv-key.pem -out quiz-olalinv-cert.pem
