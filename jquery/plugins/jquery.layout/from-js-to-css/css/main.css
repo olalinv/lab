@@ -1,0 +1,95 @@
+html,
+body {
+  background-color: rgb(221, 221, 221);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+  margin: auto;
+  min-width: 925px;
+  width: 80%;
+}
+
+.display-table {
+  background: rgb(255, 255, 255);
+  display: table;
+  width: 100%;
+}
+
+.display-table-cell {
+  display: table-cell;
+}
+
+.ui-layout-center {
+  padding: 10px;
+}
+
+.ui-layout-content {
+  height: calc(100% - 130px);
+}
+
+.ui-layout-content.ui-layout-north-hidden {
+  height: calc(100% - 15px);
+}
+
+.ui-layout-north {
+  height: 115px;
+}
+
+.ui-layout-resizer {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.ui-layout-resizer::before {
+  background-color: #585858;
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+}
+
+.ui-layout-resizer.toggled::before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.ui-layout-resizer-north {
+  height: 15px;
+}
+
+.ui-layout-resizer-north::before {
+  background-image: url(../img/icon-chevron-up.png);
+  height: 15px;
+  margin: auto;
+  width: 48px;
+}
+
+.ui-layout-resizer-west {
+  vertical-align: middle;
+  width: 15px;
+}
+
+.ui-layout-resizer-west::before {
+  background-image: url(../img/icon-chevron-left.png);
+  height: 48px;
+  width: 15px;
+}
+
+.ui-layout-south {
+  background-color: rgb(102, 102, 102);
+  color: #fff;
+  height: 75px;
+}
+
+.ui-layout-west {
+  background-color: #eee;
+  padding: 10px;
+  width: 280px;
+}

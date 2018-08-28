@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Layout Example</title>
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/jquery.layout-latest.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('body').layout({
+				applyDemoStyles: true
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="ui-layout-north display-table">North</div>
+	<div class="ui-layout-west display-table-cell">West</div>
+	<div class="ui-layout-center display-table-cell">Center</div>
+	<div class="ui-layout-south display-table">South</div>
+</body>
+
+</html>

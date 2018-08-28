@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Layout Example</title>
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// North
+			$('.ui-layout-resizer-north').click(function() {
+				$(this).toggleClass("toggled");
+			  $('.ui-layout-north').toggle();
+				$('.ui-layout-content').toggleClass('ui-layout-north-hidden');
+			});
+			// West
+			$('.ui-layout-resizer-west').click(function() {
+				$(this).toggleClass("toggled");
+			  $('.ui-layout-west').toggle();
+			});
+		});
+	</script>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="ui-layout-north display-table">North</div>
+		<div class="ui-layout-resizer ui-layout-resizer-north display-table"></div>
+		<div class="ui-layout-content display-table">
+			<div class="ui-layout-west display-table-cell">West</div>
+			<div class="ui-layout-resizer ui-layout-resizer-west display-table-cell"></div>
+			<div class="ui-layout-center display-table-cell">Center</div>
+		</div>
+		<div class="ui-layout-south display-table">South</div>
+	</div>
+</body>
+
+</html>
