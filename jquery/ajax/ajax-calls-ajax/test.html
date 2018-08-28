@@ -1,0 +1,21 @@
+<h1>Test page</h1>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque tempore
+  saepe, omnis, ad aut inventore, ipsa ipsam doloribus dolorem, nulla repellat
+  officia debitis odio voluptatem temporibus et porro nisi dolore.
+</p>
+<script>
+  console.log("Log from test.html");
+  $("body").css( "background-color", "yellow" );
+  console.log("Body is yellow");
+  $.ajax({
+    url: "test2.html",
+    context: document.body
+  }).done(function(data) {
+    $(this).append(data);
+    console.log("ajax test2 done");
+  }).fail(function() {
+    console.log("fail");
+  });
+
+</script>
