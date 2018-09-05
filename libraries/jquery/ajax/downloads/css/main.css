@@ -1,0 +1,12 @@
+body {
+  margin: auto;
+  max-width: 85vw;
+}
+
+a {
+  background-color: lime;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 10px;
+}
