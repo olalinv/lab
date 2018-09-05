@@ -21,7 +21,7 @@ function ajaxDownload (url, data, inputName) {
     iframeHtml;
 
   if (($iframe = $('#download_iframe')).length === 0) {
-    $iframe = $('<iframe id="download_iframe"' + ' style="display: none" src="about:blank"></iframe>').appendTo('body');
+    $iframe = $('<iframe id="download_iframe" style="display: none" src="about:blank"></iframe>').appendTo('body');
   }
 
   iframeDoc = $iframe[0].contentWindow || $iframe[0].contentDocument;
@@ -29,7 +29,7 @@ function ajaxDownload (url, data, inputName) {
     iframeDoc = iframeDoc.document;
   }
 
-  iframeHtml = '<html><head></head><body><form method="GET" action="' + url + '">' + '<input type="hidden" name="' + inputName + '" value="' + JSON.stringify(data) + '"/></form></body></html>';
+  iframeHtml = '<html><head></head><body><form method="GET" action="' + url + '"><input type="hidden" name="' + inputName + '" value="' + JSON.stringify(data) + '"/></form></body></html>';
 
   iframeDoc.open();
   iframeDoc.write(iframeHtml);
