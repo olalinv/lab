@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Icons -->
+  <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- Place favicon.ico in the root directory -->
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <main>
+    <h1>HTML Forms</h1>
+    <article>
+      <h2>Test #1: a form</h2>
+      <form action="https://www.google.es/search" name="f" method="GET">
+        <input type="text" name="q">
+        <input type="submit" value="Google it">
+       </form>
+      <h2>Test #2: a form inside a form</h2>
+      <form action="https://www.google.es/search" name="f" method="GET">
+        <input type="text" name="q">
+        <input type="submit" value="Google it">
+        <form action="https://www.bing.com/search" name="f" method="GET">
+          <input type="text" name="q">
+          <input type="submit" value="Bing it">
+          <div>Look, ma! This line stays inside the form</div>
+         </form>
+         <div>Look, ma! This line is left out of the form</div>
+       </form>
+    </article>
+  </main>
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
