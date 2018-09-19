@@ -1,0 +1,10 @@
+<h2>{{componenteName}}</h2>
+<p>{{componenteDesc}}</p>
+<input type="text" [(ngModel)]="selectedColor" autofocus>
+<div>
+  <textarea [style.color]="selectedColor == '#fff' || selectedColor == '#ffffff' || selectedColor == 'white' ? '#000' : '#fff'" [ngStyle]="{
+    'background-color': selectedColor,
+    'border': '1px solid #ccc',
+    'height': '50px',
+    'width': '167px'}">{{selectedColor}}</textarea>
+</div>

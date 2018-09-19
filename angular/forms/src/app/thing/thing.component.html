@@ -1,0 +1,31 @@
+<form #formThing="ngForm" (ngSubmit)="onSubmit();">
+  <p>
+    <label>Id:</label>
+    <input type="text" name="id" #id="ngModel" [(ngModel)]="thing.id" required pattern="[0-9]+">
+    <span *ngIf="id.touched && !id.valid">
+      Error: ID is not valid
+    </span>
+  </p>
+  <p>
+    <label>Title:</label>
+    <input type="text" name="title" #title="ngModel" [(ngModel)]="thing.title" required>
+    <span *ngIf="title.touched && !title.valid">
+      Error: Title is required
+    </span>
+  </p>
+  <p>
+    <label>Type:</label>
+    <input type="text" name="type" #type="ngModel" [(ngModel)]="thing.type" required pattern="[a-zA-Z#]+">
+    <span *ngIf="title.touched && !title.valid">
+        Error: Type is not valid
+      </span>
+  </p>
+  <input type="submit" value="Send" [disabled]="!formThing.form.valid">
+</form>
+
+<h2>Things list</h2>
+<ul>
+  <li *ngFor="let thing of things">
+    {{ thing.id }} - {{ thing.title }} - {{ thing.type }}
+  </li>
+</ul>

@@ -1,0 +1,16 @@
+<button (click)="toggleIsFlagged()">Toggle things</button>
+<ul *ngIf="isFlagged === true">
+  <li *ngFor="let thing of things; let i = index" [class.class-type]="thing.type" [style.color]="thing.type === 'A' ? '#000' : '#999'">
+    Thing {{i+1}}:
+    <ul>
+      <li [ngClass]="{
+        'class-a': thing.type === 'A',
+        'class-b': thing.type === 'B'
+      }">{{thing.title}} [{{thing.id}}]
+        <ul [ngSwitch]="thing.type">
+          <li *ngSwitchCase="'A'" [ngStyle]="{'background-color': 'yellow'}">Type A</li>
+          <li *ngSwitchCase="'B'" [ngStyle]="{'background-color': 'grey'}">Type B</li>
+        </ul>
+    </ul>
+  </li>
+</ul>

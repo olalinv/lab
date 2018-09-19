@@ -1,0 +1,26 @@
+body {
+  margin: auto;
+  max-width: 85vw;
+}
+
+summary {
+  background-color: lightskyblue;
+  border: solid 1px #999;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: '+';
+  font-weight: 700;
+  padding-right: 0.5em;
+}
+
+details[open] > summary::before {
+  content: '-';
+}

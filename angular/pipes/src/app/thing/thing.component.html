@@ -1,0 +1,22 @@
+<h2>{{componenteName}}</h2>
+<p>{{componenteDesc}}</p>
+<div *ngIf="!paramId">
+  <div *ngFor="let thing of things; let i = index">
+    Thing {{i+1}}
+  </div>
+</div>
+
+<div *ngIf="paramId">
+  <div *ngFor="let thing of things; let i = index">
+    <div *ngIf="thing.id === paramId">
+      Thing {{i+1}}:
+      <ul>
+        <li>[{{thing.id}}] {{thing.title}} [{{thing.type}}]</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<span *ngFor="let thing of things; let i = index">
+    <button (click)="redirect(thing.id)">{{thing.id}}</button>
+</span>
