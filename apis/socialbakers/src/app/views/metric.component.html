@@ -1,0 +1,73 @@
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a [routerLink]="['']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a [routerLink]="['/metrics']" [routerLinkActive]="['active']">Metrics</a>
+  </li>
+  <li class="breadcrumb-item">{{ profileId }}</li>
+</ol>
+<section>
+  <div class="container-fluid">
+    <h2>Statistics of this month</h2>
+    <div class="row">
+        <div class="col-sm-6">
+          <h4>Comments count</h4>
+          <div [hidden]="!commentsCountChart">
+            <canvas #commentsCountChartCanvas></canvas>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <h4>Followers change</h4>
+          <div [hidden]="!followersChangeChart">
+            <canvas #followersChangeChartCanvas></canvas>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <h4>Followers count lifetime</h4>
+        <div [hidden]="!followersCountLifetimeChart">
+          <canvas #followersCountLifetimeChartCanvas></canvas>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h4>Following count lifetime</h4>
+        <div [hidden]="!followingCountLifetimeChart">
+          <canvas #followingCountLifetimeChartCanvas></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container-fluid">
+    <h2>Statistics of a day</h2>
+    <div class="text-right">
+      <label>Choose a day <input type="date" [(ngModel)]="selectedDay" (ngModelChange)="getMetricsOneDay()"></label>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+          <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Comments count</th>
+              <th scope="col">Followers change</th>
+              <th scope="col">Followers count lifetime</th>
+              <th scope="col">Following count lifetime</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let metric of metricsOneDay">
+              <td>{{ metric.comments_count }}</td>
+              <td>{{ metric.followers_change }}</td>
+              <td>{{ metric.followers_count_lifetime }}</td>
+              <td>{{ metric.following_count_lifetime }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

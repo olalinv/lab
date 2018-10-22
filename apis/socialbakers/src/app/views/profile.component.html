@@ -1,0 +1,24 @@
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a [routerLink]="['']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+  </li>
+  <li class="breadcrumb-item">Metrics</li>
+</ol>
+
+<section *ngIf="profiles">
+  <div class="container-fluid">
+    <h3>Profiles</h3>
+    <div class="row">
+      <div *ngFor="let profile of profiles" class="col-sm text-center">
+        <a href="/metrics/{{profile.id}}">
+          <img src="{{profile.picture}}" class="img-fluid" alt="{{profile.profileName}}">
+          <div class="mt-2">{{ profile.name }}</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<span *ngIf="!profiles">
+  Loading...
+</span>
