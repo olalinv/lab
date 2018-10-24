@@ -1,16 +1,33 @@
+// Angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
+import { routing, appRoutingProviders } from './app.routing';
 
-import { AppComponent } from './app.component';
+// App decorator
+import { BaseComponent } from './base/base.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+// App modules
+import { HomeComponent } from './home/home.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    BaseComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    PostComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    FormsModule,
+    routing
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [appRoutingProviders],
+  bootstrap: [BaseComponent]
 })
 export class AppModule { }
