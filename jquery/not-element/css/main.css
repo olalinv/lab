@@ -1,0 +1,11 @@
+html,
+body {
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+.panel {
+  background-color: yellow;
+  display: block;
+  padding: 20px;
+}
