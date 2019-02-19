@@ -1,5 +1,16 @@
 'use strict';
 
+// Manual POJO
+// var pojo = function (name, age) {
+//     return {
+//         name: name,
+//         age: age
+//     };
+// };
+// let thing = pojo('name', 'age');
+// console.log(thing.name);
+// console.log(thing.age);
+
 // POJOs dynamic generator
 var pojo = function () {
     var members = arguments;
