@@ -1,0 +1,11 @@
+body {
+  margin: auto;
+  max-width: 85vw;
+}
+
+w-button {
+  background: #999;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 5px 10px;
+}
