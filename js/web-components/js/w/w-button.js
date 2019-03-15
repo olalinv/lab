@@ -4,14 +4,26 @@
 const template = document.createElement('template');
 template.innerHTML = `
   <link rel="stylesheet" href="./js/w/w-button.css">
-  <div class="w-button"></div>
+  <div class="w-button">
+    <span class="w-button-icon"></span>
+    <span class="w-button-text"></span>
+  </div>
 `;
 
 // Class
 export class WButton extends HTMLElement {
 
   static get observedAttributes() {
-    return ['title'];
+    return ['icon', 'title'];
+  }
+
+  get icon() {
+    return this._icon;
+  }
+
+  set icon(value) {
+    this._icon = value;
+    this.buttonIconElement.innerHTML = this._icon;
   }
 
   get title() {
@@ -20,7 +32,7 @@ export class WButton extends HTMLElement {
 
   set title(value) {
     this._title = value;
-    this.buttonElement.innerHTML = this._title;
+    this.buttonTextElement.innerHTML = this._title;
   }
 
   constructor() {
@@ -31,7 +43,8 @@ export class WButton extends HTMLElement {
     this.root.appendChild(template.content.cloneNode(true));
 
     // Elements
-    this.buttonElement = this.root.querySelector('.w-button');
+    this.buttonIconElement = this.root.querySelector('.w-button-icon');
+    this.buttonTextElement = this.root.querySelector('.w-button-text');
 
     // Events
     this.root.addEventListener('click', () => {
@@ -43,6 +56,9 @@ export class WButton extends HTMLElement {
 
   // Attributes
   attributeChangedCallback(attrName, oldValue, newValue) {
+    if (attrName === 'icon' & oldValue !== newValue) {
+      this.icon = newValue;
+    }
     if (attrName === 'title' & oldValue !== newValue) {
       this.title = newValue;
     }
