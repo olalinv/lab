@@ -3,10 +3,10 @@
 // Template
 const template = document.createElement('template');
 template.innerHTML = `
-  <link rel="stylesheet" href="./js/w/w-button.css">
-  <div class="w-button">
-    <span class="w-button-icon"></span>
-    <span class="w-button-text"></span>
+  <link rel="stylesheet" href="./js/w/button/button.css">
+  <div class="button">
+    <span class="button-icon"></span>
+    <span class="button-text"></span>
   </div>
 `;
 
@@ -43,13 +43,13 @@ export class WButton extends HTMLElement {
     this.root.appendChild(template.content.cloneNode(true));
 
     // Elements
-    this.buttonIconElement = this.root.querySelector('.w-button-icon');
-    this.buttonTextElement = this.root.querySelector('.w-button-text');
+    this.buttonIconElement = this.root.querySelector('.button-icon');
+    this.buttonTextElement = this.root.querySelector('.button-text');
 
     // Events
     this.root.addEventListener('click', () => {
       this.dispatchEvent(new CustomEvent('someEvent', {
-        detail: 'someValue'
+        detail: 'Hello'
       }));
     })
   }

@@ -1,6 +1,6 @@
-@import 'common.css';
+@import '../common.css';
 
-.w-button {
+.button {
   background: var(--main-bg-color);
   border: 1px solid var(--main-border-color);
   color: var(--main-text-color);
@@ -8,3 +8,7 @@
   display: inline-block;
   padding: 5px 10px;
 }
+
+.button-icon {}
+
+.button-text {}
